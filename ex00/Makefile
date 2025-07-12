@@ -1,5 +1,5 @@
 
-NAME	:= exec_cpp07
+NAME	:= exec_cpp08
 
 SRC_DIR := src
 SRCS	:= main.cpp
