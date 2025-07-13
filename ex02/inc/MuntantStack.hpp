@@ -8,10 +8,17 @@ class MutantStack : public std::stack<T> {
 private:
 
 public:
-	// MutantStack();
-	// MutantStack(const MutantStack &);
-	// MutantStack(MutantStack &&);
-	// ~MutantStack();
+	MutantStack() : std::stack<T>() {}
+	MutantStack(const MutantStack<T> &toCopy) : std::stack<T>() {
+		*this = toCopy;
+	};
+	MutantStack<T>& operator=(const MutantStack<T> &toAsgn) {
+		if (this != &toAsgn) {
+			std::stack<T>::operator=(toAsgn);
+		}
+		return (*this);
+	}
+	~MutantStack() {}
 
 	// iterators
 	typedef typename std::deque<T>::iterator iterator;
