@@ -50,12 +50,12 @@ public:
 		return (std::stack<T>::c.rend());
 	}
 
-	const_reverse_iterator rcbegin() const {
-		return (std::stack<T>::c.rcbegin());
+	const_reverse_iterator crbegin() const {
+		return (std::stack<T>::c.crbegin());
 	}
 
-	const_reverse_iterator rcend() const {
-		return (std::stack<T>::c.rcend());
+	const_reverse_iterator crend() const {
+		return (std::stack<T>::c.crend());
 	}
 
 
