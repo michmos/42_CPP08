@@ -48,10 +48,10 @@ unsigned int	Span::shortestSpan() const {
 
 	std::vector<int> copy(numbers_);
 	std::sort(copy.begin(), copy.end());
-	int lastElement = *copy.begin();
-	int shortestSpan = std::numeric_limits<int>::max();
+	unsigned int lastElement = *copy.begin();
+	unsigned int shortestSpan = std::numeric_limits<int>::max();
 	std::for_each(std::next(copy.begin()), copy.end(), [&lastElement, &shortestSpan](int currentElement) {
-		int currentSpan = currentElement - lastElement;
+		unsigned int currentSpan = currentElement - lastElement;
 		if (currentSpan < shortestSpan) {
 			shortestSpan = currentSpan;
 		}
